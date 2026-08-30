@@ -59,27 +59,55 @@ function createQR() {
     const qrImage =
         document.getElementById("qrImage");
 
+    if (!qrImage) {
+        return;
+    }
 
-    /*
-        Untuk sementara QR dibuat menggunakan
-        layanan QR image.
-
-        Nanti setelah struktur website sudah
-        stabil, QR scanner asli akan kita pasang.
-    */
+    const websiteURL =
+        "https://birthday-zeta-lovat.vercel.app/?access=birthday";
 
     const qrData =
-        encodeURIComponent(
-            "BIRTHDAY-" + CONFIG.name + "-2026"
-        );
-
+        encodeURIComponent(websiteURL);
 
     qrImage.src =
         "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data="
         + qrData;
 
+    console.log("QR Code berhasil dibuat.");
 
-    console.log("QR berhasil dibuat.");
+}
+
+// ==========================================
+// QR ACCESS
+// ==========================================
+
+const urlParams =
+    new URLSearchParams(window.location.search);
+
+const birthdayAccess =
+    urlParams.get("access");
+
+if (birthdayAccess === "birthday") {
+
+    window.addEventListener("DOMContentLoaded", function () {
+
+        if (qrScreen) {
+
+            qrScreen.classList.add("hidden");
+
+        }
+
+        if (passwordScreen) {
+
+            passwordScreen.classList.remove("hidden");
+
+        }
+
+        console.log(
+            "QR berhasil discan. Masuk ke Password Screen."
+        );
+
+    });
 
 }
 
