@@ -312,6 +312,32 @@ function checkPassword() {
             "PASSWORD BENAR"
         );
 
+        const backgroundMusic =
+    document.getElementById("backgroundMusic");
+
+if (backgroundMusic) {
+
+    backgroundMusic.volume = 0.35;
+
+    backgroundMusic.play()
+        .then(function () {
+
+            console.log(
+                "BACKGROUND MUSIC BERHASIL DIPUTAR"
+            );
+
+        })
+        .catch(function (error) {
+
+            console.error(
+                "BACKGROUND MUSIC GAGAL DIPUTAR:",
+                error
+            );
+
+        });
+
+}
+
 
         // Tunggu sebentar sebelum masuk
         // ke animasi kado
