@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For You ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- =====================================
+     GLOBAL FLOWERS
+     Mulai aktif setelah Open My Gift
+====================================== -->
+
+<div
+id="globalFlowers"
+class="global-flowers"
+aria-hidden="true">
+
+<span>🌸</span>
+<span>🌷</span>
+<span>🌼</span>
+<span>🌺</span>
+<span>🌹</span>
+<span>🌸</span>
+<span>🌻</span>
+<span>🌷</span>
+<span>🌼</span>
+<span>🌺</span>
+<span>🌸</span>
+<span>🌹</span>
+<span>🌷</span>
+<span>🌼</span>
+<span>🌸</span>
+<span>🌺</span>
+<span>🌻</span>
+<span>🌷</span>
+<span>🌹</span>
+<span>🌸</span>
+
+</div>
+
+    <!-- =====================================
+         QR LOGIN
+    ====================================== -->
+
+    <section id="qrScreen" class="screen qr-screen">
+
+        <div class="qr-content">
+
+            <p class="top-label">
+                A LITTLE SURPRISE
+            </p>
+
+            <h1>
+                For Rhesa Alfian
+            </h1>
+
+            <p class="qr-description">
+                Scan this QR code<br>
+                to open your surprise
+            </p>
+
+
+            <!-- QR -->
+
+            <div class="qr-box">
+
+                <img
+                    id="qrImage"
+                    class="qr-image"
+                    alt="QR Code"
+                >
+
+            </div>
+
+
+            <p class="scan-text">
+                Scan the code to continue
+            </p>
+
+
+            <button
+                type="button"
+                id="simulateButton"
+                class="simulate-button">
+
+                Simulasikan Scan QR
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         LOADING
+    ====================================== -->
+
+    <section
+        id="loadingScreen"
+        class="screen loading-screen hidden">
+
+        <div class="flower flower-1">🌸</div>
+        <div class="flower flower-2">🌷</div>
+        <div class="flower flower-3">🌼</div>
+        <div class="flower flower-4">🌺</div>
+
+
+        <div class="loading-content">
+
+            <div class="loading-flower">
+                🌷
+            </div>
+
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <p>
+                Preparing something special for you...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         PASSWORD
+    ====================================== -->
+
+    <section
+        id="passwordScreen"
+        class="screen password-screen hidden">
+
+        <div class="password-content">
+
+            <div class="password-flower">
+                🌷
+            </div>
+
+            <p class="password-label">
+                ONE LITTLE SECRET
+            </p>
+
+            <h1>
+                For You, My Love
+            </h1>
+
+            <p class="password-description">
+                Enter our secret code
+            </p>
+
+
+            <div
+                id="passwordDots"
+                class="password-dots">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+            <p
+                id="passwordError"
+                class="password-error">
+            </p>
+
+
+            <div class="keypad">
+
+                <button type="button" class="key" data-number="1">1</button>
+                <button type="button" class="key" data-number="2">2</button>
+                <button type="button" class="key" data-number="3">3</button>
+
+                <button type="button" class="key" data-number="4">4</button>
+                <button type="button" class="key" data-number="5">5</button>
+                <button type="button" class="key" data-number="6">6</button>
+
+                <button type="button" class="key" data-number="7">7</button>
+                <button type="button" class="key" data-number="8">8</button>
+                <button type="button" class="key" data-number="9">9</button>
+
+                <button type="button" class="key special" id="clearPassword">×</button>
+                <button type="button" class="key" data-number="0">0</button>
+                <button type="button" class="key special" id="deletePassword">⌫</button>
+
+            </div>
+
+
+            <p class="password-hint">
+                A little secret between us ♡
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================
+     GIFT SCREEN
+====================================== -->
+
+<section
+id="giftScreen"
+class="screen gift-screen hidden">
+
+<div class="gift-content">
+
+    <p class="gift-label">
+        A LITTLE SURPRISE
+    </p>
+
+    <h1>
+        This is for you ♡
+    </h1>
+
+    <p class="gift-description">
+        Something special is waiting for you...
+    </p>
+
+
+    <!-- GIFT -->
+
+    <div
+        id="gift"
+        class="gift">
+
+        <!-- Glow -->
+
+        <div class="gift-glow"></div>
+
+
+        <!-- Lid -->
+
+        <div class="gift-lid">
+
+            <div class="lid-ribbon"></div>
+
+        </div>
+
+
+        <!-- Box -->
+
+        <div class="gift-box">
+
+            <div class="box-ribbon"></div>
+
+        </div>
+
+
+        <!-- Ribbon -->
+
+        <div class="gift-ribbon-left"></div>
+
+        <div class="gift-ribbon-right"></div>
+
+
+        <!-- Sparkles -->
+
+        <!-- FLOWER BURST -->
+
+<div class="flower-burst">
+
+    <span class="burst-flower flower-burst-1">🌸</span>
+    <span class="burst-flower flower-burst-2">🌷</span>
+    <span class="burst-flower flower-burst-3">🌼</span>
+    <span class="burst-flower flower-burst-4">🌺</span>
+    <span class="burst-flower flower-burst-5">🌻</span>
+    <span class="burst-flower flower-burst-6">🌹</span>
+    <span class="burst-flower flower-burst-7">🌸</span>
+    <span class="burst-flower flower-burst-8">🌷</span>
+    <span class="burst-flower flower-burst-9">🌼</span>
+    <span class="burst-flower flower-burst-10">🌺</span>
+    <span class="burst-flower flower-burst-11">🌸</span>
+    <span class="burst-flower flower-burst-12">🌻</span>
+    <span class="burst-flower flower-burst-13">🌷</span>
+    <span class="burst-flower flower-burst-14">🌹</span>
+    <span class="burst-flower flower-burst-15">🌺</span>
+    <span class="burst-flower flower-burst-16">🌼</span>
+
+</div>
+
+    </div>
+
+
+    <p
+        id="giftInstruction"
+        class="gift-instruction">
+
+        A little gift for you ♡
+
+    </p>
+
+
+    <button
+        id="openGiftButton"
+        class="open-gift-button">
+
+        Open My Gift ♡
+
+    </button>
+
+</div>
+
+</section>
+
+<!-- =====================================
+     SECTION 7
+====================================== -->
+
+<section
+    id="section7"
+    class="screen section7-screen hidden">
+
+    <div class="section7-content">
+
+        <div class="section7-flower">
+            🌷
+        </div>
+
+        <p class="section7-small-text">
+            TO THE MOST SPECIAL PERSON
+        </p>
+
+        <h1 class="section7-title">
+            Happy Birthday,
+            <br>
+            Rhesa Alfian ♡
+        </h1>
+
+        <p class="section7-message">
+            30 august the most special day
+        </p>
+
+        <div class="section7-line"></div>
+
+        <p class="section7-bottom">
+            And this little surprise
+            <br>
+            is just for you...
+        </p>
+
+        <button
+            id="continueSection7"
+            class="section7-button">
+
+            Continue ♡
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     SECTION 8
+====================================== -->
+
+<section
+    id="section8"
+    class="screen section8-screen hidden"
+>
+
+    <div class="section8-content">
+
+        <div class="section8-decoration">
+            ✦
+        </div>
+
+
+        <p class="section8-label">
+            with all my heart 
+        </p>
+
+
+        <h2 class="section8-title">
+
+            May each day
+            <br>
+            ahead be more beautiful
+            <br>
+            than the last.
+
+        </h2>
+
+
+        <div class="section8-flower">
+            🌸
+        </div>
+
+
+        <p class="section8-caption">
+
+            Selamat ulang tahun.Semoga hidupmu sekuat bahumu,
+            <br>
+            setenang tatapmu, dan sehangat pelukmu.
+            <br>
+            Terima kasih telah menjadi rumah
+tempat aku selalu ingin kembali. ♡
+
+        </p>
+
+        <button
+            id="continueSection8"
+            class="section8-button">
+
+            Continue ♡
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     SECTION 9
+====================================== -->
+
+<section
+    id="section9"
+    class="screen section9-screen hidden">
+
+    <div class="section9-content">
+
+        <p class="section9-label">
+            A LETTER FOR YOU
+        </p>
+
+        <div class="letter-card">
+
+            <div class="letter-flower">
+                🌷
+            </div>
+
+            <h2>
+                Happy birthday, sayang 🤍
+            </h2>
+
+            <p>
+                Semoga di umur kamu yang baru ini, kamu selalu diberi kesehatan, kebahagiaan, rezeki yang cukup dan lancar, serta dimudahkan dalam setiap langkah yang kamu ambil. Semoga semua yang kamu impikan perlahan bisa terwujud, urusan kamu dilancarkan, dan kamu selalu dikelilingi orang-orang baik. I hope this new chapter of your life brings you so many good things, beautiful moments, and reasons to smile.
+            </p>
+
+            <p>
+                Aku bersyukur banget bisa dipertemukan sama kamu. Dari sekian banyak orang, ternyata aku bisa kenal dan punya kesempatan untuk berjalan bareng kamu. Aku senang banget sama senyum kamu, sesederhana itu tapi selalu bisa bikin aku ikut bahagia.
+            </p>
+
+            <p>
+                Aku ingin ada di setiap langkah kamu, nemenin kamu saat semuanya mudah maupun saat semuanya terasa berat. Aku tahu perjalanan kita nggak akan selalu mudah. Kita sama-sama masih punya banyak takut, banyak ragu, dan mungkin masih banyak hal yang harus kita hadapi. Tapi nggak apa-apa, kita nggak harus punya semua jawabannya sekarang.
+            </p>
+
+            <p>
+                Makasih ya, sudah mau kenal sama aku, sudah mau memberi aku kesempatan untuk hadir di hidup kamu. Mungkin kita sama-sama masih takut dengan banyak hal, but somehow, I feel like we can face it together.
+            </p>
+
+            <p>
+                Kalau nanti dunia terasa terlalu berat, semoga kita bisa saling menguatkan. Kita mungkin sama-sama punya banyak ketakutan, tapi bersama, I believe we can fight the world together. 🤍
+            </p>
+
+            <p>
+                Sekali lagi, happy birthday, sayang. Semoga kamu selalu bahagia, bukan cuma hari ini, tapi juga di hari-hari berikutnya. And I hope I can be there for many of those moments. Love you. 🫶🏻
+            </p>
+
+            <p>
+                With all my love 
+            </p>
+
+            <p>
+                pita
+            </p>
+
+            <div class="letter-signature">
+                With love, always ♡
+            </div>
+
+        </div>
+
+        <button
+            id="continueSection9"
+            class="section9-button">
+
+            One More Thing ♡
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     SECTION 10
+====================================== -->
+
+<section
+    id="section10"
+    class="screen section10-screen hidden">
+
+    <div class="section10-content">
+
+        <p class="section10-label">
+            A LITTLE MEMORY
+        </p>
+
+        <h2 class="section10-title">
+            Some moments
+            <br>
+            are worth keeping.
+        </h2>
+
+        <div class="memory-sparkles">
+
+            <span>✦</span>
+            <span>✧</span>
+            <span>♡</span>
+            <span>✦</span>
+
+        </div>
+
+
+        <div class="memory-frame">
+
+            <div class="memory-placeholder">
+
+                <img
+                    src="section10.jpeg"
+                    class="section10-photo"
+                    alt="Our first date"
+                >
+
+            </div>
+
+        </div>
+
+
+        <p class="memory-caption">
+            our first date
+        </p>
+
+
+        <button
+            id="continueSection10"
+            class="section10-button"
+            type="button">
+
+            Continue ♡
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     SECTION 11 - LITTLE MOMENTS
+========================================== -->
+
+<section
+    id="section11"
+    class="screen section11-screen hidden"
+>
+
+    <div class="section11-content">
+
+        <div class="section11-label">
+            OUR MEMORIES
+        </div>
+
+        <h1 class="section11-title">
+            Little moments, big memories. ♡
+        </h1>
+
+
+        <!-- ======================================
+             MEMORY GALLERY
+        ======================================= -->
+
+        <div
+            id="memoryGallery"
+            class="memory-gallery"
+        >
+
+            <!-- FOTO 1 -->
+<div class="memory-photo photo-1" data-index="0">
+    <div class="photo-placeholder">
+        <img src="foto1.jpeg" alt="Memory 1">
+    </div>
+</div>
+
+
+<!-- FOTO 2 -->
+<div class="memory-photo photo-2" data-index="1">
+    <div class="photo-placeholder">
+        <img src="foto2.jpeg" alt="Memory 2">
+    </div>
+</div>
+
+
+<!-- FOTO 3 -->
+<div class="memory-photo photo-3" data-index="2">
+    <div class="photo-placeholder">
+        <img src="foto3.jpeg" alt="Memory 3">
+    </div>
+</div>
+
+
+<!-- FOTO 4 -->
+<div class="memory-photo photo-4" data-index="3">
+    <div class="photo-placeholder">
+        <img src="foto4.jpeg" alt="Memory 4">
+    </div>
+</div>
+
+
+        <p class="section11-caption">
+            Some moments may seem small,
+            but they become the memories
+            we treasure forever. ♡
+        </p>
+
+
+        <button
+            id="continueSection11"
+            class="section11-button"
+        >
+            Continue ♡
+        </button>
+
+    </div>
+
+
+    <!-- ==========================================
+         MEMORY CABINET
+    =========================================== -->
+
+    <div
+        id="memoryCabinet"
+        class="memory-cabinet hidden"
+    >
+
+        <!-- CLOSE -->
+        <button
+            id="closeCabinet"
+            class="cabinet-close"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+        <!-- CABINET -->
+        <div class="cabinet">
+
+            <!-- LEFT DOOR -->
+            <div class="cabinet-door cabinet-door-left">
+
+                <div class="door-heart">
+                    ♡
+                </div>
+
+                <div class="door-handle">
+                    ●
+                </div>
+
+            </div>
+
+
+            <!-- INSIDE -->
+            <div class="cabinet-inside">
+
+                <div class="cabinet-light"></div>
+
+                <div class="cabinet-decoration">
+                    ♡
+                </div>
+
+
+                <!-- PHOTO -->
+                <div class="cabinet-photo-frame">
+
+                    <img
+                        id="cabinetPhoto"
+                        src=""
+                        alt="Selected memory"
+                    >
+
+                </div>
+
+
+                <!-- DRAWER -->
+                <div class="cabinet-drawer">
+
+                    <span>♡</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT DOOR -->
+            <div class="cabinet-door cabinet-door-right">
+
+                <div class="door-heart">
+                    ♡
+                </div>
+
+                <div class="door-handle">
+                    ●
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <div class="cabinet-navigation">
+
+            <button
+                id="previousMemory"
+                class="cabinet-nav"
+            >
+                ‹
+            </button>
+
+
+            <div
+                id="memoryDots"
+                class="memory-dots"
+            ></div>
+
+
+            <button
+                id="nextMemory"
+                class="cabinet-nav"
+            >
+                ›
+            </button>
+
+        </div>
+
+
+        <div class="cabinet-caption">
+            A little memory, kept forever. ♡
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     SECTION 12 - OUR JOURNEY
+========================================== -->
+
+<section
+    id="section12"
+    class="screen section12-screen hidden"
+>
+
+    <div class="section12-content">
+
+        <div class="section12-eyebrow">
+            - Our Journey -
+        </div>
+
+        <h2 class="section12-title">
+            Memories We've Written Together
+        </h2>
+
+        <div class="journey-grid">
+
+            <!-- JOURNEY 1 -->
+            <div class="journey-card">
+                <div class="journey-icon">
+                    ♡
+                </div>
+
+                <div class="journey-card-content">
+                    <h3>Our First Concert </h3>
+
+                    <p>
+                        A night full of music and screams 
+                        that felt like the best day on earth, 
+                        simply because I was there with you.
+                    </p>
+                </div>
+            </div>
+
+            <!-- JOURNEY 2 -->
+            <div class="journey-card">
+                <div class="journey-icon">
+                    ✦
+                </div>
+
+                <div class="journey-card-content">
+                    <h3>Little Moments</h3>
+
+                    <p>
+                        The little conversations, laughter,
+                        and moments that slowly became special.
+                    </p>
+                </div>
+            </div>
+
+            <!-- JOURNEY 3 -->
+            <div class="journey-card">
+                <div class="journey-icon">
+                    ♡
+                </div>
+
+                <div class="journey-card-content">
+                    <h3>Growing Together</h3>
+
+                    <p>
+                        Through every season, we learned,
+                        understood, and grew together.
+                    </p>
+                </div>
+            </div>
+
+            <!-- JOURNEY 4 -->
+            <div class="journey-card">
+                <div class="journey-icon">
+                    ✧
+                </div>
+
+                <div class="journey-card-content">
+                    <h3>Beautiful Days</h3>
+
+                    <p>
+                        Ordinary days became beautiful simply
+                        because we experienced them together.
+                    </p>
+                </div>
+            </div>
+
+            <!-- JOURNEY 5 -->
+            <div class="journey-card">
+                <div class="journey-icon">
+                    ♡
+                </div>
+
+                <div class="journey-card-content">
+                    <h3>Through Everything</h3>
+
+                    <p>
+                        The good days, difficult days,
+                        and everything in between shaped us.
+                    </p>
+                </div>
+            </div>
+
+            <!-- JOURNEY 6 -->
+            <div class="journey-card">
+                <div class="journey-icon">
+                    ✦
+                </div>
+
+                <div class="journey-card-content">
+                    <h3>Still Writing</h3>
+
+                    <p>
+                        Our story isn't finished.
+                        There are still many memories waiting to be written.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <button
+            id="continueSection12"
+            class="section12-button"
+        >
+            Continue ♡
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     SECTION 13 - OUR SONGS
+========================================== -->
+
+<section
+    id="section13"
+    class="screen section13-screen hidden"
+>
+
+    <div class="section13-content">
+
+        <!-- HEADER -->
+
+        <div class="section13-header">
+
+            <p class="section13-eyebrow">
+                - Our Songs -
+            </p>
+
+            <h2 class="section13-title">
+                Special Playlist
+            </h2>
+
+            <p class="section13-subtitle">
+                Songs that remind me of you ♡
+            </p>
+
+        </div>
+
+
+        <!-- MAIN MUSIC PLAYER -->
+
+        <audio id="birthdayAudio"></audio>
+
+        <div class="music-player">
+
+            <!-- ALBUM / CASSETTE -->
+
+            <div class="cassette-area">
+
+                <div class="cassette">
+
+                    <div class="cassette-label">
+                        <span>♡</span>
+                        <small>FOR YOU</small>
+                    </div>
+
+                    <div class="cassette-reel reel-left">
+                        <span></span>
+                    </div>
+
+                    <div class="cassette-reel reel-right">
+                        <span></span>
+                    </div>
+
+                    <div class="cassette-line"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SONG INFO -->
+
+            <div class="music-info">
+
+                <p class="now-playing">
+                    NOW PLAYING
+                </p>
+
+                <h3 id="currentSongTitle">
+                    Our Favorite Song
+                </h3>
+
+                <p id="currentSongArtist">
+                    Your Favorite Band
+                </p>
+
+
+                <!-- PROGRESS -->
+
+                <div class="music-progress">
+
+                    <div
+                        id="musicProgressBar"
+                        class="music-progress-bar">
+                    </div>
+
+                </div>
+
+
+                <div class="music-time">
+
+                    <span id="currentTime">
+                        0:00
+                    </span>
+
+                    <span id="songDuration">
+                        0:00
+                    </span>
+
+                </div>
+
+
+                <!-- CONTROLS -->
+
+                <div class="music-controls">
+
+                    <button
+                        id="previewMusic"
+                        class="music-control secondary"
+                        type="button"
+                        aria-label="Preview">
+
+                        ♫
+
+                    </button>
+
+
+                    <button
+                        id="previousSong"
+                        class="music-control"
+                        type="button"
+                        aria-label="Previous">
+
+                        ‹‹
+
+                    </button>
+
+
+                    <button
+                        id="playPauseSong"
+                        class="music-control play"
+                        type="button"
+                        aria-label="Play">
+
+                        ▶
+
+                    </button>
+
+
+                    <button
+                        id="nextSong"
+                        class="music-control"
+                        type="button"
+                        aria-label="Next">
+
+                        ››
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- OTHER SONGS -->
+
+        <div class="playlist-section">
+
+            <p class="playlist-label">
+                MORE SONGS FOR YOU
+            </p>
+
+
+            <div class="playlist-grid">
+
+                <!-- SONG 1 -->
+
+                <button
+                    type="button"
+                    class="playlist-card"
+                    data-song="0"
+                >
+
+                    <div class="playlist-icon">
+                        ♫
+                    </div>
+
+                    <div class="playlist-info">
+
+                        <h4>
+                            Kita Lewati Berdua
+                        </h4>
+
+                        <p>
+                            Overnight
+                        </p>
+
+                    </div>
+
+                    <span class="playlist-arrow">
+                        ›
+                    </span>
+
+                </button>
+
+
+                <!-- SONG 2 -->
+
+                <button
+                    type="button"
+                    class="playlist-card"
+                    data-song="1"
+                >
+
+                    <div class="playlist-icon">
+                        ♫
+                    </div>
+
+                    <div class="playlist-info">
+
+                        <h4>
+                            Kita Buat Menyenangkan
+                        </h4>
+
+                        <p>
+                            Bernadya
+                        </p>
+
+                    </div>
+
+                    <span class="playlist-arrow">
+                        ›
+                    </span>
+
+                </button>
+
+
+                <!-- SONG 3 -->
+
+                <button
+                    type="button"
+                    class="playlist-card"
+                    data-song="2"
+                >
+
+                    <div class="playlist-icon">
+                        ♫
+                    </div>
+
+                    <div class="playlist-info">
+
+                        <h4>
+                            Jatuh Suka
+                        </h4>
+
+                        <p>
+                            TULUS
+                        </p>
+
+                    </div>
+
+                    <span class="playlist-arrow">
+                        ›
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <button
+        id="continueSection13"
+        class="section13-button"
+        type="button"
+    >
+        Continue ♡
+    </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     SECTION 14 - REASONS I'M GRATEFUL
+========================================== -->
+
+<section
+    id="section14"
+    class="screen section14-screen hidden"
+>
+
+    <div class="section14-content">
+
+        <!-- EYEBROW -->
+
+        <p class="section14-eyebrow">
+            - From My Heart To Yours -
+        </p>
+
+
+        <!-- TITLE -->
+
+        <h2 class="section14-title">
+            Reasons I'm Grateful
+            <br>
+            to Know You
+        </h2>
+
+
+        <!-- DESCRIPTION -->
+
+        <p class="section14-description">
+            Shake the bottle and see
+            <br>
+            a reason why I'm so grateful to know you.
+        </p>
+
+
+        <!-- DECORATION -->
+
+        <div class="section14-heart">
+            ♡
+        </div>
+
+
+        <!-- ======================================
+             BOTTLE
+        ======================================= -->
+
+        <div
+            id="reasonBottle"
+            class="reason-bottle"
+        >
+
+            <!-- SHINE -->
+
+            <div class="bottle-shine"></div>
+
+
+            <!-- NECK -->
+
+            <div class="bottle-neck"></div>
+
+
+            <!-- CORK -->
+
+            <div class="bottle-cork"></div>
+
+
+            <!-- ROPE -->
+
+            <div class="bottle-rope"></div>
+
+
+            <!-- TAG -->
+
+            <div class="bottle-tag">
+                <span>For</span>
+                <span>You</span>
+                <small>♡</small>
+            </div>
+
+
+            <!-- BOTTLE BODY -->
+
+            <div class="bottle-body">
+
+                <div class="paper paper-1">♡</div>
+                <div class="paper paper-2">♡</div>
+                <div class="paper paper-3">♡</div>
+                <div class="paper paper-4">♡</div>
+                <div class="paper paper-5">♡</div>
+                <div class="paper paper-6">♡</div>
+                <div class="paper paper-7">♡</div>
+                <div class="paper paper-8">♡</div>
+                <div class="paper paper-9">♡</div>
+                <div class="paper paper-10">♡</div>
+                <div class="paper paper-11">♡</div>
+                <div class="paper paper-12">♡</div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================================
+             SHAKE BUTTON
+        ======================================= -->
+
+        <button
+            id="shakeBottleButton"
+            class="shake-bottle-button"
+            type="button"
+        >
+
+            <span class="shake-icon">
+                ♡
+            </span>
+
+            <span>
+                Shake the Bottle
+            </span>
+
+        </button>
+
+
+        <!-- ======================================
+             RESULT CARD
+        ======================================= -->
+
+        <div
+            id="reasonResult"
+            class="reason-result"
+        >
+
+            <div class="reason-result-label">
+                <span>♥</span>
+                Here's your reason
+            </div>
+
+
+            <p
+                id="reasonText"
+                class="reason-text"
+            >
+                You make the ordinary moments
+                feel so special.
+            </p>
+
+        </div>
+
+
+        <!-- BOTTOM MESSAGE -->
+
+        <p class="reason-bottom-text">
+            There are so many more reasons...
+            <br>
+            Shake again and see another one
+            <span>♡</span>
+        </p>
+
+        <!-- ======================================
+     FINAL BIRTHDAY MESSAGE
+====================================== -->
+
+<div class="final-birthday-message">
+
+    <div class="final-paper">
+
+        <div class="final-paper-decoration">
+            ✦
+        </div>
+
+        <div class="birthday-cake">
+            🎂
+        </div>
+
+        <h2>
+            Happy Birthday!
+        </h2>
+
+        <p>
+            The most special Rhesa Alfian
+            <span>♡</span>
+        </p>
+
+        <div class="final-divider">
+            ♡
+        </div>
+
+        <button
+            id="closeWebsiteButton"
+            class="close-website-button"
+            type="button"
+        >
+            Close ♡
+        </button>
+
+    </div>
+
+</div>
+
+
+    </div>
+
+</section>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="music.js"></script>
+
+
+</body>
+</html>
