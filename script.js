@@ -1696,21 +1696,21 @@ const playlistCards =
 const songs = [
 
     {
-        title: "Perfect",
-        artist: "Ed Sheeran",
-        file: "./music/perfect.mp3"
+        title: "Kita Lewati Berdua",
+        artist: "Overnight",
+        file: "./lagu1.mp3"
     },
 
     {
-        title: "Until I Found You",
-        artist: "Stephen Sanchez",
-        file: "./music/until-i-found-you.mp3"
+        title: "Kita Buat Menyenangkan",
+        artist: "Bernadya",
+        file: "./lagu2.mp3"
     },
 
     {
-        title: "A Thousand Years",
-        artist: "Christina Perri",
-        file: "./music/a-thousand-years.mp3"
+        title: "Jatuh Suka",
+        artist: "TULUS",
+        file: "./lagu3.mp3"
     }
 
 ];
