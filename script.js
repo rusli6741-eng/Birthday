@@ -1,11 +1,3 @@
-// ==========================================
-// BIRTHDAY WEBSITE
-// STEP 1
-// ==========================================
-
-
-console.log("SCRIPT BERHASIL DIMUAT");
-
 
 // ==========================================
 // CONFIG
@@ -19,6 +11,99 @@ const CONFIG = {
 
 };
 
+// ==========================================
+// BACKGROUND MUSIC
+// ==========================================
+
+const backgroundMusic =
+    document.getElementById("backgroundMusic");
+
+
+// ==========================================
+// BACKGROUND MUSIC CONTROL
+// ==========================================
+
+function pauseBackgroundMusic() {
+
+    if (!backgroundMusic) {
+        console.error(
+            "BACKGROUND MUSIC TIDAK DITEMUKAN!"
+        );
+        return;
+    }
+
+    backgroundMusic.pause();
+
+    console.log(
+        "BACKGROUND MUSIC: PAUSED"
+    );
+
+}
+
+
+function resumeBackgroundMusic() {
+
+    if (!backgroundMusic) {
+        console.error(
+            "BACKGROUND MUSIC TIDAK DITEMUKAN!"
+        );
+        return;
+    }
+
+    backgroundMusic.play()
+        .then(function() {
+
+            console.log(
+                "BACKGROUND MUSIC: RESUMED"
+            );
+
+        })
+        .catch(function(error) {
+
+            console.error(
+                "BACKGROUND MUSIC GAGAL RESUME:",
+                error
+            );
+
+        });
+
+}
+
+
+// ==========================================
+// RESUME BACKGROUND MUSIC
+// ==========================================
+
+function resumeBackgroundMusic() {
+
+    if (backgroundMusic) {
+
+        backgroundMusic.play()
+            .then(function() {
+
+                console.log(
+                    "BACKGROUND MUSIC: RESUME"
+                );
+
+            })
+            .catch(function(error) {
+
+                console.error(
+                    "BACKGROUND MUSIC GAGAL RESUME:",
+                    error
+                );
+
+            });
+
+    } else {
+
+        console.error(
+            "backgroundMusic tidak ditemukan!"
+        );
+
+    }
+
+}
 
 // ==========================================
 // GET ELEMENTS
@@ -195,6 +280,9 @@ const passwordDots =
         "#passwordDots span"
     );
 
+    const passwordError =
+    document.getElementById("passwordError");
+
 const numberButtons =
     document.querySelectorAll(
         ".key[data-number]"
@@ -312,8 +400,9 @@ function checkPassword() {
             "PASSWORD BENAR"
         );
 
-        const backgroundMusic =
-    document.getElementById("backgroundMusic");
+        // ======================================
+// START BACKGROUND MUSIC
+// ======================================
 
 if (backgroundMusic) {
 
@@ -1193,9 +1282,20 @@ if (continueSection12) {
         function() {
 
             console.log(
-                "Continue Section 12 → Section 13"
+                "SECTION 12 → SECTION 13"
             );
 
+
+            // ======================================
+            // PAUSE BACKGROUND MUSIC
+            // ======================================
+
+            pauseBackgroundMusic();
+
+
+            // ======================================
+            // PINDAH SECTION
+            // ======================================
 
             const section12 =
                 document.getElementById(
@@ -1208,8 +1308,6 @@ if (continueSection12) {
                 );
 
 
-            // Sembunyikan Section 12
-
             if (section12) {
 
                 section12.classList.add(
@@ -1219,8 +1317,6 @@ if (continueSection12) {
             }
 
 
-            // Tampilkan Section 13
-
             if (section13) {
 
                 section13.classList.remove(
@@ -1228,6 +1324,11 @@ if (continueSection12) {
                 );
 
             }
+
+
+            console.log(
+                "MASUK SECTION 13 - PLAYLIST MODE"
+            );
 
         }
     );
@@ -1455,7 +1556,9 @@ if (closeWebsiteButton) {
 // ==========================================
 
 const continueSection13 =
-    document.getElementById("continueSection13");
+    document.getElementById(
+        "continueSection13"
+    );
 
 
 if (continueSection13) {
@@ -1464,25 +1567,84 @@ if (continueSection13) {
         "click",
         function() {
 
+            console.log(
+                "SECTION 13 → SECTION 14"
+            );
+
+
+            // ======================================
+            // STOP PLAYLIST SONG
+            // ======================================
+
+            if (birthdayAudio) {
+
+                birthdayAudio.pause();
+
+                birthdayAudio.currentTime =
+                    0;
+
+                console.log(
+                    "PLAYLIST SONG: STOP"
+                );
+
+            }
+
+
+            // ======================================
+            // RESET PLAY BUTTON
+            // ======================================
+
+            if (playPauseSong) {
+
+                playPauseSong.textContent =
+                    "▶";
+
+            }
+
+
+            // ======================================
+            // RESUME BACKGROUND MUSIC
+            // ======================================
+
+            resumeBackgroundMusic();
+
+
+            // ======================================
+            // PINDAH SECTION
+            // ======================================
+
             const section13 =
-                document.getElementById("section13");
+                document.getElementById(
+                    "section13"
+                );
 
             const section14 =
-                document.getElementById("section14");
+                document.getElementById(
+                    "section14"
+                );
 
 
             if (section13) {
 
-                section13.classList.add("hidden");
+                section13.classList.add(
+                    "hidden"
+                );
 
             }
 
 
             if (section14) {
 
-                section14.classList.remove("hidden");
+                section14.classList.remove(
+                    "hidden"
+                );
 
             }
+
+
+            console.log(
+                "SECTION 14 - BACKGROUND MUSIC RESUMED"
+            );
 
         }
     );
